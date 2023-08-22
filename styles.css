@@ -71,9 +71,29 @@ h5{
     animation: textflicker 0.001s infinite alternate;
 }
 
+@media(max-width: 1300px){
+    #text-input{
+        max-height: 30%;
+        max-width: 59%;
+        top: 49%;
+        left: 52%;
+        font-size: 0.6rem;
+    }
+}
+
+@media(max-width: 1000px){
+    #text-input{
+        max-height: 40%;
+        max-width: 59%;
+        top: 49%;
+        left: 52%;
+        font-size: 0.6rem;
+    }
+}
+
 @media(max-width: 600px){
     #text-input{
-        max-height: 38%;
+        max-height: 32%;
         max-width: 59%;
         top: 49%;
         left: 52%;
@@ -89,7 +109,7 @@ h5{
         margin-top: 20px;
     }
 }
-  
+
 @keyframes background_flicker {
     25%{
         background-position: 49.9% 50.1%;
