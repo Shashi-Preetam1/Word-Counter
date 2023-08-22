@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'retro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(sources/retro_computer_personal_use.ttf);
+}
+
+html, body
+{
+    height: 100%;
+    width: 98%;
+    font-family: retro;
+    font-size: 1.5rem;
+    color: #eee;
+    background-image: url(sources/space.jpg);
+    background-position: 50% 50%;
+    animation: background_flicker 0.3s infinite alternate;
+    text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+    letter-spacing: 0.125em;
+}
+
+.row{
+    height: 100%;
+}
+
+.left, .right{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: transparent; 
+}
+
+.pc{
+    height: auto;
+    max-width: 100%;
+}
+
+#text-input{
+    position: absolute;
+    background-color: transparent;
+    color: #00FF9F;
+    font-size: 1rem;
+    text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+    animation: textflicker 0.001s infinite alternate;
+    letter-spacing: 0.125em;
+    border: none;
+    height: auto;
+    min-height: 11%;
+    height: 520px;
+    max-height: 45%;
+    width: 650px;
+    max-width: 61%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-62%);
+}
+
+#text-input::-webkit-scrollbar { width: 0 !important }
+
+#text-input:focus{
+    border: none;
+    outline: none;
+}
+
+h5{
+    line-height: 1.8;
+    padding-bottom: 20px;
+    animation: textflicker 0.001s infinite alternate;
+}
+
+@media(max-width: 600px){
+    #text-input{
+        max-height: 38%;
+        max-width: 59%;
+        top: 49%;
+        left: 52%;
+        font-size: 0.6rem;
+    }
+
+    h5{
+        line-height: 1;
+        font-size: 0.8rem;
+    }
+
+    .count-container{
+        margin-top: 20px;
+    }
+}
+  
+@keyframes background_flicker {
+    25%{
+        background-position: 49.9% 50.1%;
+    }
+    50%{
+        background-position: 50% 50%;
+    }
+    100%{
+        background-position: 50.1% 49.9%;
+    }
+}
+
+@keyframes textflicker {
+    from {
+      text-shadow: 0.5px 0 0 #ea36af, -1px 0 0 #75fa69;
+    }
+    to {
+      text-shadow: 5px 2px 5px #ea36af, -3px -2px 5px #75fa69;
+    }
+}
