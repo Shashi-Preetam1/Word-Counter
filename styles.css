@@ -101,22 +101,27 @@ h5{
     }
 }
 
-@media(max-width: 650px){
+@media(max-width: 720px){
     #text-input{
-        max-height: 38%;
-        max-width: 59%;
-        top: 49%;
-        left: 52%;
-        font-size: 0.6rem;
+        height: 38%;
     }
+}
 
-    h5{
-        line-height: 1;
-        font-size: 0.8rem;
+@media(max-width: 550px){
+    #text-input{
+        height: 220px;
     }
+}
 
-    .count-container{
-        margin-top: 20px;
+@media(max-width: 475px){
+    #text-input{
+        height: 30%;
+    }
+}
+
+@media(max-width: 350px){
+    #text-input{
+        height: 25%;
     }
 }
 
